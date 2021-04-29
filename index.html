@@ -12,29 +12,36 @@
 <body>
     <div class="container">
         <div class="text-center mt-4">
-            <h2 class="mb-4">Find Meals For You Ingredients.</h2>
-            <blockquote>  Real food doesn't have Ingredient,real food is Ingredient. <br>
-            <cite> -jamie oliver</cite>
-            </blockquote>
+                <h2 class="mb-4">Find Meals For You Ingredients.</h2>
+                <blockquote>  Real food doesn't have Ingredient,real food is Ingredient. <br>
+                <cite> -jamie oliver</cite>
+                </blockquote>
         </div>
-            <div class="input-group justify-content-center mt-3">
-                <input type="text" id="search-input" placeholder="Enter an Ingredient (bread,chilli,chicken,beef,egg)" />
-                <div class="input-group-append">
-                  <button class="btn btn-outline-danger" id="search-btn" type="button"><i class="fas fa-search"></i></button>
-                </div>
-              </div>
-              <h3 class="text-center mt-3 mb-3"> Your Search Result</h3>
-            
-                <div id="meal">
-                </div>
-
-            <!-- USES Modal -->
-                <div class="meal-details-content modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-
-              </div>
-
-              <script src="script.js"></script>
+          <div class="input-group m-auto" style="width: 60%"> 
+            <select class="custom-select" id="search-input">
+                <option value="bread">bread</option>
+                <option value="chilli">chilli</option>
+                <option value="chicken">chicken</option>
+                <option value="beef">beef</option>
+                <option value="egg">egg</option>
+            </select>
+            <div class="input-group-append">
+                <button class="btn btn-outline-danger" id="search-btn" type="button"><i class="fas fa-search"></i></button>
+            </div>
+          </div>
+     
+           <h3 class="text-center mt-4 mb-3"> Your Search Result</h3>
+                  <div id="meal">
+                  </div>
     </div>
+
+                  <!-- USES Modal -->
+           
+               <div class="meal-details-content modal " id="exampleModalCenter">
+              </div>
+          
+            <script src="script.js"></script>
+
 
 
 
