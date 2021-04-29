@@ -27,7 +27,7 @@ function getMealList(){
                    </div>
                 `;
             });
-        //  mealList.classList.remove('notFound');
+         mealList.classList.remove('notFound');
         } else{
             html = "Sorry, we didn't find any meal! Please Try Again";
             mealList.classList.add('notFound');
@@ -48,43 +48,38 @@ function getMealRecipe(e){
     }
 }
 
-
+// function closeBtn() {
+//   // e.preventDefault();
+//   document.getElementById("deleteBtn").style.display = "none";
+//   // document.getElementById("meal")
+// }
 
 // create a modal
 function mealRecipeModal(meal){
     // console.log(meal);
     meal = meal[0];
-    let html = `
+    let html = `  
      
-     <!-- USES Modal -->
-    
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content" style="background-color: rgba(231, 74, 12, 0.959);">
-        <div class="meal-details">
-                <button type="button"  class="recipe-close-btn" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-           </button>
-        </div>
-          <div class="modal-body text-center">
-            <h5  class="modal-title= text-light" id="exampleModalLongTitle"> ${meal.strMeal}</h5>
-             <button class="btn btn-light">${meal.strCategory}</button>
-             <p class="text-light">Instructure</p>
-            <p class="text-light"> ${meal.strInstructions}</p>
-          </div>
-          <div class="modal-footer m-auto">
-              <img class="card-img" src= "${meal.strMealThumb}" alt="Card image cap"/>           
-        </div>
-        </div>
-      </div>
+<div class="modal in" id="post-modal" style="display: block;">
+   <div class="modal-dialog">
+      <div class="modal-content text-center">
 
+               <div class="inline-menu-container">
+                    <a id="modal-close" class="close pr-3 pt-3" data-dismiss="modal"><span aria-hidden="true">×</span></a>
+               </div>
+
+               <h5 class="modal-title= text-dark" id="exampleModalLongTitle"> ${meal.strMeal}</h5>
+               <button class="btn btn-dark mb-3">${meal.strCategory}</button>
+               <p class="text-dark">Instructure</p>
+               <p class="text-dark"> ${meal.strInstructions}</p>
+               <img class="card-img mt-4 mb-4" src= "${meal.strMealThumb}" alt="Card image cap"/>
+               <a class="video" href="${meal.strYoutube}" target="blank"><i class="fab fa-youtube"></i></a>
+               <h3 class="text-center mb-3">Watch Video</h3>
+        </div>
+     </div>
+  </div>`
        
-    `;
+    ;
     mealDetailsContent.innerHTML = html;
-    mealDetailsContent.parentElement.classList.add('showRecipe');
-}
-
-
-
-// <div class = "recipe-link">
-// <a href = "${meal.strYoutube}" target = "_blank">Watch Video</a>
-// </div>
+  };
+ 
